@@ -23,11 +23,7 @@ class HomePage extends StatelessWidget {
               //logout
               BlocProvider.of<FirebaseAuthenticatorBloc>(context).add(SignOut());
             }, child: Text('Logout'),),
-            BlocListener<FirebaseAuthenticatorBloc, FirebaseAuthenticatorState>(listener: (context, state) {
-              if(state is FirebaseAuthenticationSignedOut){
-                Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => LoginPage()));
-              }
-            },child: Container(),)
+            Container()
           ],
         ),
       ),
