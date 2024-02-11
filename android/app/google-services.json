@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "983251131509",
+    "project_id": "gitty-auth",
+    "storage_bucket": "gitty-auth.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:983251131509:android:8d43e28c09136943c72c3c",
+        "android_client_info": {
+          "package_name": "auth_app.jg.com.auth_fb_bloc"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxrR4zkCMMHYfPAzpzZPEWtUKntEaqEo0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
