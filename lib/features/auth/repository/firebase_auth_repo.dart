@@ -4,10 +4,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 
 class FireBaseAuthenticationRepository {
   final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
-  //sign in with email and password
-  hi(){
 
-  }
 
 
 
@@ -35,6 +32,7 @@ class FireBaseAuthenticationRepository {
       }
       throw Exception("Firebase sign in proceeded but user returned NULL");
     } on FirebaseAuthException catch (e) {
+    print("FIREBASE EXP:${e.message}");
       return ErrorFutureResponse("Firebase EXP:${e.message}");
     } catch (e) {
       return ErrorFutureResponse("Something went wrong OR ${e.toString()}");

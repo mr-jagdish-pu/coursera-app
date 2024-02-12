@@ -33,6 +33,7 @@ class FirebaseAuthenticatorBloc extends Bloc<FirebaseAuthenticatorEvent, Firebas
       if (response is SuccessFutureResponse<UserModel>) {
         emit(FirebaseAuthenticatorSuccess(user: response.data));
       } else if (response is ErrorFutureResponse) {
+        print("THE RESPONSE IS ##${response.message}");
         emit(FirebaseAuthenticatorFailed(message: response.message));
       }
     });
