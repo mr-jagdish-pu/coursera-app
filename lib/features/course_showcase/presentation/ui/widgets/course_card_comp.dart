@@ -13,7 +13,7 @@ class CourseCard extends StatelessWidget {
     final wd = MediaQuery.of(context).size.width;
     return Container(
       padding: EdgeInsets.all(5),
-      width: (wd * 0.48).w,
+      width: (wd * 0.45).w,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -24,6 +24,8 @@ class CourseCard extends StatelessWidget {
             child: ClipRRect(
               borderRadius: BorderRadius.circular(8),
               child: Image.network(
+                errorBuilder: (context, a, B) =>
+                    Center(child: Icon(Icons.warning_amber)),
                 fit: BoxFit.fill,
                 'https://th.bing.com/th/id/R.ca3215dfb3008313ffa25a089daef890?rik=Lo1scMB4FyGv4A&pid=ImgRaw&r=0',
               ),

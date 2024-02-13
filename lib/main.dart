@@ -1,6 +1,9 @@
 import 'package:auth_fb_bloc/features/auth/presentation/authenticator_bloc/firebase_authenticator_bloc.dart';
 import 'package:auth_fb_bloc/features/auth/presentation/pages/login_page.dart';
+import 'package:auth_fb_bloc/features/course_showcase/presentation/ui/pages/course_details.dart';
 import 'package:auth_fb_bloc/features/course_showcase/presentation/ui/pages/homepage.dart';
+import 'package:auth_fb_bloc/features/course_showcase/presentation/ui/pages/see_all_page.dart';
+import 'package:auth_fb_bloc/features/learning_progress/presentation/ui/pages/learn_page.dart';
 import 'package:auth_fb_bloc/test_screens/demo_screens.dart';
 import 'package:auth_fb_bloc/utils/responsiveness/extensions.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -11,16 +14,17 @@ import 'package:google_fonts/google_fonts.dart';
 
 import 'features/auth/presentation/pages/homepage.dart';
 import 'features/auth/presentation/pages/registration_page.dart';
+import 'features/user_profile/presentation/ui/pages/profile_page.dart';
 import 'firebase_options.dart';
 
 main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-  runApp( MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-   MyApp({super.key});
+  MyApp({super.key});
   final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
   // This widget is the root of your application.
   @override
@@ -29,13 +33,14 @@ class MyApp extends StatelessWidget {
       create: (context) => FirebaseAuthenticatorBloc(),
       child: MediaQuery(
         data: MediaQueryData(
-            size: MediaQuery.sizeOf(context),
-            textScaler: TextScaler.linear(1.w),),
+          size: MediaQuery.sizeOf(context),
+          textScaler: TextScaler.linear(1.w),
+        ),
         child: MaterialApp(
-          title: 'Auth with Bloc',
+          debugShowCheckedModeBanner: false,
           theme: ThemeData(
-            textTheme: GoogleFonts.notoSansJpTextTheme(),
-
+            fontFamily: GoogleFonts.sourceSans3().fontFamily,
+            textTheme: GoogleFonts.sourceSans3TextTheme(),
             colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
             useMaterial3: true,
           ),
@@ -48,18 +53,16 @@ class MyApp extends StatelessWidget {
                 return Text('Error');
               }
               if (snapshot.hasData && snapshot.data != null) {
-
-                return RealHomePage();
+                return CourseDetails();
               }
               //if user is not logged in send to login page
 
               return LoginPage();
-            }, stream: _firebaseAuth.authStateChanges(),
+            },
+            stream: _firebaseAuth.authStateChanges(),
           ),
         ),
       ),
     );
   }
 }
-
-

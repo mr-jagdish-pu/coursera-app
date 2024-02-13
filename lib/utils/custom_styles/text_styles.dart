@@ -6,7 +6,9 @@ class TextStyles {
   static final normalBut70 = TextStyle(
     fontSize: 15, fontWeight: FontWeight.w500, color: Colors.black87.withOpacity(0.6), );
   static final thickTitle = TextStyle(
-      fontSize: 20, fontWeight: FontWeight.w600, color: Colors.black87);
+      fontSize: 18.5, fontWeight: FontWeight.w600, color: Colors.black87.withOpacity(0.75));
+  static final bigThickTitle = TextStyle(
+      fontSize: 25, fontWeight: FontWeight.w600, color: Colors.black87.withOpacity(0.5));
   static final courseTitle = TextStyle(
       fontSize: 16.5, fontWeight: FontWeight.w400, color: Colors.black87);
   static final courseSubtitle = TextStyle(
