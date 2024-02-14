@@ -21,6 +21,8 @@ dependencies:
   google_fonts: ^6.1.0
   material_symbols_icons: ^4.2719.1
   dots_indicator: ^3.0.0
+  getwidget: ^4.0.0
+  readmore: ^2.2.0
 
 dev_dependencies:
   flutter_test:
