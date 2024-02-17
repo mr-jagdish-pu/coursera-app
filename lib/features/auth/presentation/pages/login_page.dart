@@ -4,19 +4,16 @@ import 'package:auth_fb_bloc/features/auth/presentation/pages/registration_page.
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../repository/firebase_auth_repo.dart';
 final GlobalKey<FormState> formKey1 = GlobalKey<FormState>();
+
 class LoginPage extends StatelessWidget {
   //form key
-
 
   //controllers
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
 
   //instance of firebaserepo
-  final FireBaseAuthenticationRepository _fireBaseAuthenticationRepository =
-  FireBaseAuthenticationRepository();
 
   LoginPage({super.key});
 
@@ -45,12 +42,13 @@ class LoginPage extends StatelessWidget {
             width: double.maxFinite,
             height: 50,
             padding: EdgeInsets.symmetric(horizontal: 20),
-            child: BlocConsumer<FirebaseAuthenticatorBloc, FirebaseAuthenticatorState>(
+            child: BlocConsumer<FirebaseAuthenticatorBloc,
+                FirebaseAuthenticatorState>(
               builder: (context, state) {
                 print("STATE FROM LOGIN 48 ${state}");
 
                 return FilledButton(
-                  onPressed:  () {
+                  onPressed: () {
                     //check if form is valid
                     if (formKey.currentState!.validate()) {
                       BlocProvider.of<FirebaseAuthenticatorBloc>(context).add(
@@ -66,21 +64,25 @@ class LoginPage extends StatelessWidget {
                     }
                     //snackbar to show to resolve the issue
                     else {
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(
-                          content: Text(
-                              ('Please satisfy the requirements to login'),
+                      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                        content: Text(
+                          ('Please satisfy the requirements to login'),
                         ),
                       ));
                     }
                   },
-                  child: (state is FirebaseAuthenticatorLoading)?CircularProgressIndicator(): Text('Login'),
+                  child: (state is FirebaseAuthenticatorLoading)
+                      ? CircularProgressIndicator()
+                      : Text('Login'),
                 );
-              }, listener: (BuildContext context, FirebaseAuthenticatorState state) {
-                if(state is FirebaseAuthenticatorSuccess){
-                  Navigator.of(context).push(MaterialPageRoute(builder: (_)=>HomePage()));
+              },
+              listener:
+                  (BuildContext context, FirebaseAuthenticatorState state) {
+                if (state is FirebaseAuthenticatorSuccess) {
+                  Navigator.of(context)
+                      .push(MaterialPageRoute(builder: (_) => HomePage()));
                 }
-            },
+              },
             ),
           ),
         ],

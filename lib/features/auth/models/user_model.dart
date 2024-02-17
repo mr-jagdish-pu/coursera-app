@@ -4,14 +4,14 @@ class UserModel extends Equatable {
   final String id;
   final String email;
   final String name;
-   String? photoUrl;
-
+  final String? photoUrl;
 
   UserModel({
     required this.id,
     required this.email,
     required this.name,
-     this.photoUrl ='https://icon-library.com/images/person-icon-png-transparent/person-icon-png-transparent-13.jpg',
+    this.photoUrl =
+        'https://icon-library.com/images/person-icon-png-transparent/person-icon-png-transparent-13.jpg',
   });
 
   @override
@@ -27,8 +27,6 @@ class UserModel extends Equatable {
   }
 
   //from firebase usercredentials to usermodel
-
-
 
   Map<String, dynamic> toJson() {
     return {

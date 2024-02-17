@@ -1,4 +1,3 @@
-import 'package:auth_fb_bloc/features/course_showcase/presentation/ui/widgets/subsection_comp.dart';
 import 'package:auth_fb_bloc/utils/custom_styles/text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:material_symbols_icons/symbols.dart';
@@ -15,7 +14,7 @@ class ProfilePage extends StatelessWidget {
           centerTitle: true,
           actions: [
             Padding(
-              padding: const EdgeInsets.only(top:16.0),
+              padding: const EdgeInsets.only(top: 16.0),
               child: IconButton(
                 onPressed: () {},
                 icon: Icon(
@@ -63,7 +62,3 @@ class ProfilePage extends StatelessWidget {
         ));
   }
 }
-
-
-
-

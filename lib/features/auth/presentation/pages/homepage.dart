@@ -1,4 +1,3 @@
-import 'package:auth_fb_bloc/features/auth/presentation/pages/login_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -18,11 +17,17 @@ class HomePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text('Welcome to Home Page'),
-            SizedBox(height: 20,),
-            FilledButton(onPressed: (){
-              //logout
-              BlocProvider.of<FirebaseAuthenticatorBloc>(context).add(SignOut());
-            }, child: Text('Logout'),),
+            SizedBox(
+              height: 20,
+            ),
+            FilledButton(
+              onPressed: () {
+                //logout
+                BlocProvider.of<FirebaseAuthenticatorBloc>(context)
+                    .add(SignOut());
+              },
+              child: Text('Logout'),
+            ),
             Container()
           ],
         ),

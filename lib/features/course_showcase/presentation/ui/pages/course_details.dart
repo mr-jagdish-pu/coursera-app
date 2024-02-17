@@ -1,7 +1,6 @@
-import 'package:auth_fb_bloc/features/course_showcase/presentation/ui/widgets/subsection_comp.dart';
+import '../widgets/subsection_comp.dart';
 import 'package:auth_fb_bloc/utils/custom_styles/text_styles.dart';
 import 'package:auth_fb_bloc/utils/responsiveness/extensions.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:getwidget/components/accordion/gf_accordion.dart';
 import 'package:readmore/readmore.dart';
@@ -17,7 +16,57 @@ class CourseDetails extends StatelessWidget {
       ),
       body: ListView(
         children: [
+          Padding(
+            padding: const EdgeInsets.only(
+                left: 20.0, right: 10, bottom: 25, top: 20),
+            child: Text(
+                'This course is part of Meta Android Developer Professional Certificate'),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(
+              left: 20.0,
+              right: 10,
+              bottom: 25,
+            ),
+            child: Row(
+              children: [
+                Icon(Icons.star, size: 18),
+                Icon(Icons.star, size: 18),
+                Icon(Icons.star, size: 18),
+                Icon(Icons.star, size: 18),
+                Icon(Icons.star_border_outlined),
+                SizedBox(
+                  width: 8,
+                ),
+                Text("4.6 (11k)"),
+              ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20.0),
+            child: Text(
+              'Offered By',
+              style: TextStyles.thickTitle,
+              overflow: TextOverflow.ellipsis,
+              maxLines: 2,
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20.0),
+            child: Text(
+              'Meta',
+              style: TextStyles.thickTitle.copyWith(color: Colors.blue),
+              overflow: TextOverflow.ellipsis,
+              maxLines: 2,
+            ),
+          ),
+          SizedBox(
+            height: 10,
+          ),
           AboutThisCourseCard(),
+          ReusableCourseInfoC(),
+          ReusableCourseInfoC(),
+          ReusableCourseInfoC(),
           ReusableCourseInfoC(),
           SkillYoullGainC(),
           Container(
@@ -41,60 +90,71 @@ class AboutThisCourseCard extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SubSection(
-            topic: 'About this course',
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20.0),
+            child: Text(
+              'About this course',
+              style: TextStyles.thickTitle,
+              overflow: TextOverflow.ellipsis,
+              maxLines: 2,
+            ),
           ),
           SizedBox(
             height: 10,
           ),
-          ReadMoreText(
-            trimLines: 4,
-            'This course is part of the Meta Android Developer Professional Certificate. Learn mobile app development with Android Developer. This course blends theory and practice to help you build great apps the right way. In this course, you will learn how to build a user interface and retrieve data from the web. You will also learn how to use the Android Room library to create a database and how to use the Android WorkManager to schedule deferrable, asynchronous tasks. You will also learn how to use the Android WorkManager to schedule deferrable, asynchronous tasks. You will also learn how to use the Android WorkManager to schedule deferrable, asynchronous tasks. You will also learn how to use the Android WorkManager to schedule deferrable, asynchronous tasks. You will also learn how to use the Android WorkManager to schedule deferrable, asynchronous tasks. You will also learn how to use the Android WorkManager to schedule deferrable, asynchronous tasks. You will also learn how to use the Android WorkManager to schedule deferrable, asynchronous tasks. You will also learn how to use the Android WorkManager to schedule deferrable, asynchronous tasks.',
-          trimMode: TrimMode.Line
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20.0),
+            child: ReadMoreText(
 
+                trimLines: 4,
+                'This course is part of the Meta Android Developer Professional Certificate. Learn mobile app development with Android Developer. This course blends theory and practice to help you build great apps the right way. In this course, you will learn how to build a user interface and retrieve data from the web. You will also learn how to use the Android Room library to create a database and how to use the Android WorkManager to schedule deferrable, asynchronous tasks. You will also learn how to use the Android WorkManager to schedule deferrable, asynchronous tasks. You will also learn how to use the Android WorkManager to schedule deferrable, asynchronous tasks. You will also learn how to use the Android WorkManager to schedule deferrable, asynchronous tasks. You will also learn how to use the Android WorkManager to schedule deferrable, asynchronous tasks. You will also learn how to use the Android WorkManager to schedule deferrable, asynchronous tasks. You will also learn how to use the Android WorkManager to schedule deferrable, asynchronous tasks. You will also learn how to use the Android WorkManager to schedule deferrable, asynchronous tasks.',
+                trimMode: TrimMode.Line),
           )
-
-
-
         ],
       ),
     );
   }
 }
 
-
 class ReusableCourseInfoC extends StatelessWidget {
-  const ReusableCourseInfoC({super.key});
-
   @override
   Widget build(BuildContext context) {
     final wd = MediaQuery.of(context).size.width;
     return Container(
+      width: wd,
+      padding: EdgeInsets.only(left: 23, top: 30),
       child: Row(
         children: [
-          CircleAvatar(
-            child: Icon(Icons.calendar_month),
-            backgroundColor: Colors.deepPurple.shade50,
+          SizedBox(
+            width: 0.1 * wd,
+            child: CircleAvatar(
+              child: Icon(Icons.calendar_month),
+              backgroundColor: Colors.deepPurple.shade50,
+            ),
           ),
           SizedBox(
             width: 8,
           ),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                'Course 1 of 13 in the',
-                style: TextStyles.thickTitle.copyWith(fontSize: 15),
-              ),
-              Container(
-                  child: Text(
-                    'Meta Android Developer Professional Certificate',
-                    maxLines: 5,
-                    overflow: TextOverflow.ellipsis,
-                  ),
-                  width: wd * 0.8),
-            ],
+          SizedBox(
+            width: wd * 0.8,
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Course 1 of 13 in the ',
+                  style: TextStyles.thickTitle.copyWith(fontSize: 15),
+                ),
+                Container(
+                    child: Text(
+                      'Meta Android Developer Professional  Certificate',
+                      maxLines: 5,
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                    width: wd * 0.8),
+              ],
+            ),
           ),
         ],
       ),
@@ -109,6 +169,7 @@ class SkillYoullGainC extends StatelessWidget {
   Widget build(BuildContext context) {
     final wd = MediaQuery.of(context).size.width;
     return Container(
+      margin: EdgeInsets.all(20),
       width: wd.w,
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
         Text(
@@ -150,17 +211,19 @@ class SuggestedCoursesC extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final wd = MediaQuery.of(context).size.width;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         SubSection(
-          topic: 'You might also like',
+          topic: 'You might be interested in',
         ),
         SizedBox(
-          height: 10,
+          height: 15,
         ),
-        CourseCardTileC(),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20.0),
+          child: CourseCardTileC(),
+        ),
       ],
     );
   }
@@ -189,7 +252,7 @@ class CourseCardTileC extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Container(
-                  padding: EdgeInsets.only(top: 10),
+                  padding: EdgeInsets.only(top: 10, left: 4),
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(10),
                     child: Image.network(
@@ -197,7 +260,7 @@ class CourseCardTileC extends StatelessWidget {
                       fit: BoxFit.fill,
                     ),
                   ),
-                  width: 60,
+                  width: 65,
                   height: 70),
               SizedBox(
                 height: 8,
@@ -253,15 +316,15 @@ class SyllabusSectionC extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final wd = MediaQuery.of(context).size.width;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 12.0),
+          padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 20),
           child: Text('Syllabus: What you will learn from this course',
               style: TextStyles.bigThickTitle
-                  .copyWith(fontSize: 19,  fontWeight: FontWeight.w900), textScaler: TextScaler.linear(0.9)),
+                  .copyWith(fontSize: 19, fontWeight: FontWeight.w900),
+              textScaler: TextScaler.linear(0.9)),
         ),
         Divider(
           color: Colors.grey.withOpacity(0.8),
@@ -272,7 +335,14 @@ class SyllabusSectionC extends StatelessWidget {
           color: Colors.grey.withOpacity(0.8),
           thickness: 1,
         ),
-        Container(height: 30,)
+        TimeLineComp(),
+        Divider(
+          color: Colors.grey.withOpacity(0.8),
+          thickness: 1,
+        ),
+        Container(
+          height: 30,
+        )
       ],
     );
   }
@@ -287,7 +357,7 @@ class TimeLineComp extends StatelessWidget {
     return SizedBox(
       width: wd * 0.95,
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 12.0),
+        padding: const EdgeInsets.symmetric(horizontal: 20.0),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -295,7 +365,7 @@ class TimeLineComp extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(top: 10.0),
               child: Text(
-                'Week 1',
+                'Week 1'.toUpperCase(),
                 style: TextStyles.normalBut70,
               ),
             ),
@@ -369,12 +439,11 @@ class FAQSectionC extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final wd = MediaQuery.of(context).size.width;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 12.0),
+          padding: const EdgeInsets.symmetric(horizontal: 20.0),
           child: Text('Frequency Asked Questions',
               style: TextStyles.bigThickTitle
                   .copyWith(fontSize: 19, fontWeight: FontWeight.w900)),
@@ -408,7 +477,7 @@ class FAQTileC extends StatelessWidget {
   Widget build(BuildContext context) {
     final wd = MediaQuery.of(context).size.width;
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 12),
+      padding: EdgeInsets.symmetric(horizontal: 20),
       width: wd,
       child: GFAccordion(
         margin: EdgeInsets.symmetric(vertical: 8),

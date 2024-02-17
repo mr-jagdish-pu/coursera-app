@@ -3,7 +3,6 @@ import 'package:auth_fb_bloc/utils/responsiveness/extensions.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../utils/custom_styles/text_styles.dart';
-import '../pages/homepage.dart';
 
 class CourseCard extends StatelessWidget {
   const CourseCard({super.key});

@@ -6,9 +6,12 @@ class DemoTestPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     print("DemoTestPage");
-    return Scaffold(body: Center(child: SmallComponent()),);
+    return Scaffold(
+      body: Center(child: SmallComponent()),
+    );
   }
 }
+
 class SmallComponent extends StatefulWidget {
   const SmallComponent({super.key});
 
@@ -20,13 +23,15 @@ class _SmallComponentState extends State<SmallComponent> {
   bool now = false;
   @override
   Widget build(BuildContext context) {
-     return Center(
-       child: IconButton(onPressed: (){
-         setState(() {
-           now = !now;
-         });
-       }, icon:(now)?Icon(Icons.remove): Icon(Icons.add),),
-     );
+    return Center(
+      child: IconButton(
+        onPressed: () {
+          setState(() {
+            now = !now;
+          });
+        },
+        icon: (now) ? Icon(Icons.remove) : Icon(Icons.add),
+      ),
+    );
   }
 }
-

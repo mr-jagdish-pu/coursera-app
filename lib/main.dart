@@ -1,10 +1,6 @@
 import 'package:auth_fb_bloc/features/auth/presentation/authenticator_bloc/firebase_authenticator_bloc.dart';
 import 'package:auth_fb_bloc/features/auth/presentation/pages/login_page.dart';
 import 'package:auth_fb_bloc/features/course_showcase/presentation/ui/pages/course_details.dart';
-import 'package:auth_fb_bloc/features/course_showcase/presentation/ui/pages/homepage.dart';
-import 'package:auth_fb_bloc/features/course_showcase/presentation/ui/pages/see_all_page.dart';
-import 'package:auth_fb_bloc/features/learning_progress/presentation/ui/pages/learn_page.dart';
-import 'package:auth_fb_bloc/test_screens/demo_screens.dart';
 import 'package:auth_fb_bloc/utils/responsiveness/extensions.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -12,9 +8,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'features/auth/presentation/pages/homepage.dart';
-import 'features/auth/presentation/pages/registration_page.dart';
-import 'features/user_profile/presentation/ui/pages/profile_page.dart';
 import 'firebase_options.dart';
 
 main() async {
