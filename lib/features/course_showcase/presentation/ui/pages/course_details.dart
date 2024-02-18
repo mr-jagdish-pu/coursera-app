@@ -1,3 +1,5 @@
+import 'package:auth_fb_bloc/utils/responsiveness/extensions.dart';
+
 import '../widgets/about_this_course.dart';
 import '../widgets/faq_section.dart';
 import '../widgets/reusable_course_info.dart';
@@ -5,6 +7,7 @@ import '../widgets/skills_youll_gaim.dart';
 import 'package:auth_fb_bloc/utils/custom_styles/text_styles.dart';
 import 'package:flutter/material.dart';
 import '../widgets/syllabus_section.dart';
+part '../widgets/start_learning_today.dart';
 
 class CourseDetails extends StatelessWidget {
   const CourseDetails({super.key});
@@ -75,9 +78,11 @@ class CourseDetails extends StatelessWidget {
           ),
           SuggestedCoursesC(),
           SyllabusSectionC(),
+          StartLearningTodayC(),
           FAQSectionC()
         ],
       ),
     );
   }
 }
+
