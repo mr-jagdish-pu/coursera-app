@@ -8,6 +8,7 @@ import 'package:auth_fb_bloc/utils/custom_styles/text_styles.dart';
 import 'package:flutter/material.dart';
 import '../widgets/syllabus_section.dart';
 part '../widgets/start_learning_today.dart';
+part '../widgets/instructors_course.dart';
 
 class CourseDetails extends StatelessWidget {
   const CourseDetails({super.key});
@@ -78,6 +79,7 @@ class CourseDetails extends StatelessWidget {
           ),
           SuggestedCoursesC(),
           SyllabusSectionC(),
+          InstructorsOfCourse(),
           StartLearningTodayC(),
           FAQSectionC()
         ],
@@ -85,4 +87,3 @@ class CourseDetails extends StatelessWidget {
     );
   }
 }
-
