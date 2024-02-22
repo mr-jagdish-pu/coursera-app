@@ -182,6 +182,7 @@ class DailyGoalsC extends StatelessWidget {
           Row(
             children: [
               Checkbox(
+
                 value: false,
                 onChanged: (value) {},
               ),
