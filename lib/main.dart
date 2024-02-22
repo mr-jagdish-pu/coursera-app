@@ -1,7 +1,7 @@
 import 'package:auth_fb_bloc/features/auth/presentation/authenticator_bloc/firebase_authenticator_bloc.dart';
 import 'package:auth_fb_bloc/features/auth/presentation/pages/login_page.dart';
 import 'package:auth_fb_bloc/features/course_showcase/presentation/ui/pages/course_details.dart';
-import 'package:auth_fb_bloc/test_screens/demo_screens.dart';
+import 'package:auth_fb_bloc/features/course_showcase/presentation/ui/pages/course_main_page.dart';
 import 'package:auth_fb_bloc/utils/responsiveness/extensions.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -47,7 +47,7 @@ class MyApp extends StatelessWidget {
                 return Text('Error');
               }
               if (snapshot.hasData && snapshot.data != null) {
-                return DemoTestPage();
+                return CourseMainPage();
               }
               //if user is not logged in send to login page
 

@@ -1,9 +1,18 @@
-import 'package:auth_fb_bloc/utils/custom_styles/text_styles.dart';
+
+
+import '../../../../../utils/custom_styles/text_styles.dart';
 import 'package:auth_fb_bloc/utils/responsiveness/extensions.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:readmore/readmore.dart';
+part '../widgets/course_materials_c.dart';
+part '../widgets/course_introduction_c.dart';
+part '../widgets/daily_goals_c.dart';
+part '../widgets/timeremaining_c.dart';
+part '../widgets/tab_pages/homesubpage.dart';
 
-class DemoTestPage extends StatelessWidget {
-  const DemoTestPage({super.key});
+class CourseMainPage extends StatelessWidget {
+  const CourseMainPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -53,6 +62,7 @@ class DemoTestPage extends StatelessWidget {
                         fontWeight: FontWeight.w400,
                       ),
                       isScrollable: true,
+
                       tabAlignment: TabAlignment.start,
                       tabs: [
                         Tab(
@@ -90,107 +100,11 @@ class DemoTestPage extends StatelessWidget {
   }
 }
 
-class HomesubPage extends StatelessWidget {
-  const HomesubPage({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [TimeRemainingC(), DailyGoalsC()],
-    );
-  }
-}
 
-class TimeRemainingC extends StatelessWidget {
-  const TimeRemainingC({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    final wd = MediaQuery.sizeOf(context).width;
-    return Padding(
-      padding: const EdgeInsets.only(left: 20.0, top: 20),
-      child: SizedBox(
-        child: Row(
-          children: [
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  "4 hr 15 min to go",
-                  style: TextStyles.thickTitle
-                      .copyWith(fontWeight: FontWeight.w800, fontSize: 14),
-                ),
-                Container(
-                  margin: EdgeInsets.symmetric(vertical: 5),
-                  child: LinearProgressIndicator(
-                      value: 0.4,
-                      color: Colors.grey,
-                      minHeight: 5,
-                      backgroundColor: Colors.grey.shade300,
-                      borderRadius: BorderRadius.circular(10)),
-                  width: wd * 0.5,
-                ),
-                Text("1 assignment due"),
-              ],
-            ),
-            SizedBox(
-              width: 40.w,
-            ),
-            SizedBox(
-              height: 80,
-              child: VerticalDivider(
-                width: 3,
-              ),
-            ),
-            SizedBox(width: 30),
-            Column(
-              children: [
-                Icon(Icons.cloud_download_outlined),
-                Text("Download"),
-                Text(
-                  "45 MB",
-                  style: TextStyles.courseSubtitle
-                      .copyWith(color: Colors.grey.shade600),
-                )
-              ],
-            )
-          ],
-        ),
-      ),
-    );
-  }
-}
 
-class DailyGoalsC extends StatelessWidget {
-  const DailyGoalsC({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(left: 20),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            "Daily Goals",
-            style: TextStyles.thickTitle.copyWith(
-                fontSize: 14.5,
-                fontWeight: FontWeight.w900,
-                letterSpacing: -0.2),
-          ),
-          Row(
-            children: [
-              Checkbox(
 
-                value: false,
-                onChanged: (value) {},
-              ),
-              Text("Do any 3 lectures, readings or quizzes"), SizedBox(width: 20,), Text('0/3')
-            ],
-          )
-        ],
-      ),
-    );
-  }
-}
+
+
