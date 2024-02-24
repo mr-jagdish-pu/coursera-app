@@ -11,18 +11,18 @@ class InstructorsOfCourse extends StatelessWidget {
       width: wd,
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
         Padding(
-          padding: const EdgeInsets.only(left: 20.0, bottom: 20),
-          child: Text('Instructors', style: TextStyles.thickTitle),
+          padding: const EdgeInsets.only(left: 20.0, bottom: 0),
+          child: Text('Course Instructors', style: TextStyles.thickTitle),
         ),
-        _InstructorsProfile(),
-        _InstructorsProfile(),
+        InstructorsProfile(),
+        InstructorsProfile(),
       ]),
     );
   }
 }
 
-class _InstructorsProfile extends StatelessWidget {
-  const _InstructorsProfile({super.key});
+class InstructorsProfile extends StatelessWidget {
+  const InstructorsProfile({super.key});
 
   @override
   Widget build(BuildContext context) {

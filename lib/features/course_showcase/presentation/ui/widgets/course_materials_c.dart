@@ -79,3 +79,4 @@ class CourseMaterialListTile extends StatelessWidget {
     );
   }
 }
+

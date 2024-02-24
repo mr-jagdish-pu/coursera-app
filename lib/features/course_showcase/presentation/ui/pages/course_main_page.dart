@@ -1,4 +1,5 @@
-
+import 'package:auth_fb_bloc/features/course_showcase/presentation/ui/pages/course_details.dart';
+import 'package:material_symbols_icons/symbols.dart';
 
 import '../../../../../utils/custom_styles/text_styles.dart';
 import 'package:auth_fb_bloc/utils/responsiveness/extensions.dart';
@@ -10,6 +11,9 @@ part '../widgets/course_introduction_c.dart';
 part '../widgets/daily_goals_c.dart';
 part '../widgets/timeremaining_c.dart';
 part '../widgets/tab_pages/homesubpage.dart';
+part '../widgets/tab_pages/grades_subpage.dart';
+part '../widgets/tab_pages/info_subpage.dart';
+part '../widgets/tab_pages/forums_subpage.dart';
 
 class CourseMainPage extends StatelessWidget {
   const CourseMainPage({super.key});
@@ -19,6 +23,7 @@ class CourseMainPage extends StatelessWidget {
     print("DemoTestPage");
     return Scaffold(
         body: DefaultTabController(
+            initialIndex: 0,
             length: 4,
             child: NestedScrollView(
               headerSliverBuilder:
@@ -33,8 +38,11 @@ class CourseMainPage extends StatelessWidget {
                         onPressed: () {},
                       ),
                     ),
+
                     pinned: true,
                     flexibleSpace: FlexibleSpaceBar(
+
+
                       title: Text(
                         "Meta Android Developer",
                         style: TextStyles.thickTitle.copyWith(fontSize: 20),
@@ -62,7 +70,6 @@ class CourseMainPage extends StatelessWidget {
                         fontWeight: FontWeight.w400,
                       ),
                       isScrollable: true,
-
                       tabAlignment: TabAlignment.start,
                       tabs: [
                         Tab(
@@ -92,19 +99,12 @@ class CourseMainPage extends StatelessWidget {
               },
               body: TabBarView(children: [
                 HomesubPage(),
-                Text('Grades'),
-                Text('Forums'),
-                Text('Info'),
+                GradesSubPage(),
+                ForumSubpage(),
+                InfoSubpage(),
               ]),
             )));
   }
 }
-
-
-
-
-
-
-
 
 
