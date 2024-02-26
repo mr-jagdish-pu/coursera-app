@@ -9,7 +9,7 @@ class CourseHeader extends StatelessWidget {
       children: [
         Padding(
             padding: const EdgeInsets.only(left:20.0, bottom: 20, top: 20),
-            child: Text('Course Introduction', style: GoogleFonts.openSans(fontWeight: FontWeight.w700, fontSize: 15.5, color: Colors.black87.withOpacity(0.6)))
+            child: SubTitleText(text: 'Course Introduction', )
         ),
         CourseMaterialListTile(),
         Divider(),
@@ -49,20 +49,14 @@ class CourseMaterialListTile extends StatelessWidget {
             width: wd.w * 0.7,
             child:
             Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-              Text(
+              RegularText12B600(
 
-                  maxLines: 2,
-
-                  overflow: TextOverflow.ellipsis,
-                  "Introduction to UX and UI design and  principles of UI and UX design",
-                  style: TextStyles.thickTitle
-                      .copyWith(fontWeight: FontWeight.bold, fontSize: 14, height: 1.1, color: Colors.black87.withOpacity(0.65),)
-              ),
+                  text:"Introduction to UX and UI design and  principles of UI and UX design",
+               ),
               SizedBox(height: 5,),
-              Text(
+              RegularText11(text:
                 "Video - 4:15 min",
-                style: TextStyles.courseSubtitle
-                    .copyWith(color: Colors.grey.shade600),
+
               ),
             ]),
           ),

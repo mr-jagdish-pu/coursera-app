@@ -22,10 +22,9 @@ class GradesSubPage extends StatelessWidget {
               ),
               SizedBox(
                 width: wd.w * 0.7,
-                child: Text(
-                  'Complete the course by passing all the assignments and quizzes',
-                  style: TextStyles.thickTitle
-                      .copyWith(fontWeight: FontWeight.bold, fontSize: 15),
+                child: RegularText12(
+                 text: 'Complete the course by passing all the assignments and quizzes',
+
                 ),
               )
             ],
@@ -59,10 +58,8 @@ class ModuleQuizC extends StatelessWidget {
             children: [
               SizedBox(
                 width: wd.w * 0.7,
-                child: Text(
+                child: SubTitleText(text:
                   'Module Quiz: Introduction to UI/UX',
-                  style: TextStyles.thickTitle
-                      .copyWith(fontWeight: FontWeight.bold, fontSize: 15),
                 ),
               ),
               SizedBox(
@@ -74,15 +71,13 @@ class ModuleQuizC extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   //make both as purchase wala
                   children: [
-                    Text(
-                      'Quiz',
-                      style: TextStyles.courseSubtitle.copyWith(
-                        color: Colors.grey.shade600,
+                    RegularText12B600(
+                     text: 'Quiz',
+
                       ),
-                    ),
-                    Text('Weight: 20%',
-                        style: TextStyles.courseSubtitle
-                            .copyWith(color: Colors.grey.shade600))
+
+                    RegularText12(text:'Weight: 20%',
+                       )
                   ],
                 ),
               ),
@@ -97,10 +92,9 @@ class ModuleQuizC extends StatelessWidget {
                   thickness: 1,
                 ),
               ),
-              Text(
-                'Purchase course to unlock this item',
-                style: TextStyles.courseSubtitle
-                    .copyWith(color: Colors.grey.shade600),
+              RegularText11(
+               text: 'Purchase course to unlock this item',
+
               ),
             ],
           )

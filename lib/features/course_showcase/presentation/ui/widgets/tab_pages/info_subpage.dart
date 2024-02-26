@@ -28,9 +28,9 @@ class CourseDescriptionC extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
+
+          TitleText(text:
             "Course Description",
-            style: TextStyles.thickTitle,
           ),
           SizedBox(
             height: 20,

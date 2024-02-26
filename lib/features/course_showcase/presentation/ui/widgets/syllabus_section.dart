@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:getwidget/getwidget.dart';
 
+import '../../../../../test_screens/new_test_file.dart';
 import '../../../../../utils/custom_styles/text_styles.dart';
 
 class CourseCardTileC extends StatelessWidget {
@@ -95,10 +96,8 @@ class SyllabusSectionC extends StatelessWidget {
       children: [
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 20),
-          child: Text('Syllabus: What you will learn from this course',
-              style: TextStyles.bigThickTitle
-                  .copyWith(fontSize: 19, fontWeight: FontWeight.w900),
-              textScaler: TextScaler.linear(0.9)),
+          child: TitleText(text:'Syllabus: What you will learn from this course',
+              ),
         ),
         Divider(
           color: Colors.grey.withOpacity(0.8),
@@ -138,9 +137,9 @@ class TimeLineComp extends StatelessWidget {
           children: [
             Padding(
               padding: const EdgeInsets.only(top: 10.0),
-              child: Text(
-                'Week 1'.toUpperCase(),
-                style: TextStyles.normalBut70,
+              child: RegularText12(
+               text: 'Week 1'.toUpperCase(),
+
               ),
             ),
             Expanded(
@@ -171,9 +170,9 @@ class TimeLineComp extends StatelessWidget {
                         SizedBox(
                           width: 5,
                         ),
-                        Text(
-                          '4 hours and 23 minutes to complete.',
-                          style: TextStyles.normalBut70.copyWith(fontSize: 14),
+                        RegularText12B600(
+                         text: '4 hours and 23 minutes to complete.',
+
                         )
                       ],
                     ),
@@ -190,9 +189,9 @@ class TimeLineComp extends StatelessWidget {
                         SizedBox(
                           width: 5,
                         ),
-                        Text(
-                          '14 videos, 10 readings, 4 quizzes',
-                          style: TextStyles.normalBut70.copyWith(fontSize: 14),
+                        RegularText12B600(
+                        text:  '14 videos, 10 readings, 4 quizzes',
+
                         )
                       ],
                     )

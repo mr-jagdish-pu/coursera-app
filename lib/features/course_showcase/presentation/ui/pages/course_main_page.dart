@@ -1,4 +1,5 @@
 import 'package:auth_fb_bloc/features/course_showcase/presentation/ui/pages/course_details.dart';
+import 'package:auth_fb_bloc/test_screens/new_test_file.dart';
 import 'package:material_symbols_icons/symbols.dart';
 
 import '../../../../../utils/custom_styles/text_styles.dart';
@@ -23,7 +24,7 @@ class CourseMainPage extends StatelessWidget {
     print("DemoTestPage");
     return Scaffold(
         body: DefaultTabController(
-            initialIndex: 0,
+            initialIndex: 1,
             length: 4,
             child: NestedScrollView(
               headerSliverBuilder:
@@ -38,18 +39,12 @@ class CourseMainPage extends StatelessWidget {
                         onPressed: () {},
                       ),
                     ),
-
                     pinned: true,
                     flexibleSpace: FlexibleSpaceBar(
-
-
-                      title: Text(
-                        "Meta Android Developer",
-                        style: TextStyles.thickTitle.copyWith(fontSize: 20),
-                      ),
+                      title: TitleText(text: "Meta Android Developer"),
                       titlePadding: EdgeInsets.only(left: 70, bottom: 20),
                       collapseMode: CollapseMode.pin,
-                      expandedTitleScale: 1.18,
+                      expandedTitleScale: 1.2,
                       stretchModes: [StretchMode.fadeTitle],
                     ),
                     toolbarHeight: 80,
@@ -64,11 +59,16 @@ class CourseMainPage extends StatelessWidget {
                     snap: true,
                     floating: true,
                     bottom: TabBar(
+                      //by default open in 2nd tab
+
+
+
                       labelStyle: TextStyles.courseTitle
                           .copyWith(fontSize: 15, fontWeight: FontWeight.bold),
                       unselectedLabelStyle: TextStyles.courseSubtitle.copyWith(
                         fontWeight: FontWeight.w400,
                       ),
+
                       isScrollable: true,
                       tabAlignment: TabAlignment.start,
                       tabs: [
@@ -102,9 +102,7 @@ class CourseMainPage extends StatelessWidget {
                 GradesSubPage(),
                 ForumSubpage(),
                 InfoSubpage(),
-              ]),
+              ],  ),
             )));
   }
 }
-
-

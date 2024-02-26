@@ -9,31 +9,24 @@ class DailyGoalsC extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            "Daily Goals",
-            style: GoogleFonts.openSans(
-                fontWeight: FontWeight.w900,
-                letterSpacing: -0.4,
-                color: Colors.grey.shade700),
-          ),
+          SubTitleText(text: "Daily Goals"),
           Row(
             children: [
               Checkbox(
                 value: false,
                 onChanged: (value) {},
               ),
-              Text(
+              RegularText12B600(
+                text:
                 "Do any 3 lectures, readings or quizzes",
-                style: TextStyles.thickTitle
-                    .copyWith(fontWeight: FontWeight.bold, fontSize: 14),
+
               ),
               SizedBox(
                 width: 20,
               ),
-              Text(
-                '0/3',
-                style: TextStyles.thickTitle
-                    .copyWith(fontWeight: FontWeight.bold, fontSize: 15),
+              RegularText14(
+               text: '0/3',
+
               )
             ],
           )

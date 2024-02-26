@@ -9,10 +9,7 @@ class CourseIntroductionC extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            'Introduction to UX and UI design',
-            style: GoogleFonts.openSans(fontWeight: FontWeight.w700),
-          ),
+          SubTitleText(text: 'Introduction to UX and UI design'),
           SizedBox(
             height: 20,
           ),

@@ -11,8 +11,8 @@ class InstructorsOfCourse extends StatelessWidget {
       width: wd,
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
         Padding(
-          padding: const EdgeInsets.only(left: 20.0, bottom: 0),
-          child: Text('Course Instructors', style: TextStyles.thickTitle),
+          padding: const EdgeInsets.only(left: 20.0, bottom: 0, top: 20),
+          child: TitleText(text: 'Course Instructors',),
         ),
         InstructorsProfile(),
         InstructorsProfile(),
@@ -45,15 +45,11 @@ class InstructorsProfile extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(
-                    'Jagdish G.',
-                    style: TextStyles.courseTitle
-                        .copyWith(fontSize: 17, fontWeight: FontWeight.bold),
-                  ),
-                  Text(
+                  SubTitleText(text: 'Jagdish G.'),
+                  4.spacerH,
+                  RegularText12(text:
                     'Senior Software Engineer',
-                    style: TextStyles.courseTitle.copyWith(fontSize: 14),
-                  )
+                   )
                 ],
               ),
             ),

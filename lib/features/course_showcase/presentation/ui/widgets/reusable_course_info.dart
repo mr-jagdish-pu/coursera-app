@@ -1,3 +1,5 @@
+import 'package:auth_fb_bloc/test_screens/new_test_file.dart';
+import 'package:auth_fb_bloc/utils/extention/spacer_extension.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../utils/custom_styles/text_styles.dart';
@@ -28,15 +30,17 @@ class ReusableCourseInfoC extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
+                SubTitleText(text:
                   'Course 1 of 13 in the ',
-                  style: TextStyles.thickTitle.copyWith(fontSize: 15),
+
                 ),
+                3.spacerH,
+
                 Container(
-                    child: Text(
-                      'Meta Android Developer Professional  Certificate',
-                      maxLines: 5,
-                      overflow: TextOverflow.ellipsis,
+
+                    child: RegularText12(
+                    text:  'Meta Android Developer Professional  Certificate',
+
                     ),
                     width: wd * 0.8),
               ],

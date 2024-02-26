@@ -36,10 +36,10 @@ class CertificateCardComp extends StatelessWidget {
                       SizedBox(
                         width: 3,
                       ),
-                      RegularText12(text:"Completed on Nov 2, 2022"),
+                      RegularText12B600(text:"Completed on Nov 2, 2022"),
                     ],
                   ),
-                  RegularText12(text: "Grade: 89%")
+                  RegularText12B600(text: "Grade: 89%")
                 ],
               ),
               Align(

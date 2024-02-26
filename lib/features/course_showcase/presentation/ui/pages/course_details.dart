@@ -1,5 +1,7 @@
+import 'package:auth_fb_bloc/utils/extention/spacer_extension.dart';
 import 'package:auth_fb_bloc/utils/responsiveness/extensions.dart';
 
+import '../../../../../test_screens/new_test_file.dart';
 import '../widgets/about_this_course.dart';
 import '../widgets/faq_section.dart';
 import '../widgets/reusable_course_info.dart';
@@ -17,14 +19,16 @@ class CourseDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Course Details'),
+        title: HeaderText(
+          text: "Course Details",
+        ),
       ),
       body: ListView(
         children: [
           Padding(
             padding: const EdgeInsets.only(
                 left: 20.0, right: 10, bottom: 25, top: 20),
-            child: Text(
+            child: RegularText12(text:
                 'This course is part of Meta Android Developer Professional Certificate'),
           ),
           Padding(
@@ -43,26 +47,24 @@ class CourseDetails extends StatelessWidget {
                 SizedBox(
                   width: 8,
                 ),
-                Text("4.6 (11k)"),
+                RegularText14(text: "4.6 (11k)"),
               ],
             ),
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20.0),
-            child: Text(
+            child: TitleText(
+              text:
               'Offered By',
-              style: TextStyles.thickTitle,
-              overflow: TextOverflow.ellipsis,
-              maxLines: 2,
+
             ),
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20.0),
-            child: Text(
+            padding: const EdgeInsets.only(left: 20.0,right: 20.0, top: 5),
+            child: TitleText(
+              text:
               'Meta',
-              style: TextStyles.thickTitle.copyWith(color: Colors.blue),
-              overflow: TextOverflow.ellipsis,
-              maxLines: 2,
+
             ),
           ),
           SizedBox(

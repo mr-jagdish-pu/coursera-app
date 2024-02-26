@@ -1,3 +1,5 @@
+import 'package:auth_fb_bloc/test_screens/new_test_file.dart';
+import 'package:auth_fb_bloc/utils/extention/spacer_extension.dart';
 import 'package:flutter/material.dart';
 import 'package:readmore/readmore.dart';
 
@@ -12,13 +14,13 @@ class AboutThisCourseCard extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          5.spacerH,
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20.0),
-            child: Text(
+            child: TitleText(
+              text:
               'About this course',
-              style: TextStyles.thickTitle,
-              overflow: TextOverflow.ellipsis,
-              maxLines: 2,
+
             ),
           ),
           SizedBox(

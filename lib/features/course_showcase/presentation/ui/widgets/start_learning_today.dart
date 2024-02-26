@@ -9,10 +9,10 @@ class StartLearningTodayC extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
-          padding: const EdgeInsets.only(left: 20.0, bottom: 20),
-          child: Text(
+          padding: const EdgeInsets.only(left: 20.0, bottom: 20, top: 10),
+          child: TitleText(text:
             'Start Learning Today',
-            style: TextStyles.bigThickTitle.copyWith(fontSize: 20),
+
           ),
         ),
         SizedBox(
@@ -37,10 +37,9 @@ class StartLearningTodayC extends StatelessWidget {
     if (isAvailable) {
       return Container(
         padding: EdgeInsets.only(left: 20),
-        child: Text(
+        child: SubTitleText(
+          text:
           "Financial Aid Available",
-          style:
-              TextStyles.thickTitle.copyWith(color: Colors.blue, fontSize: 15),
         ),
       );
     }
@@ -68,7 +67,7 @@ class CourseHighlightsC extends StatelessWidget {
           ),
           SizedBox(
               width: wd.w * 0.8,
-              child: Text('Taught by top companies and universities')),
+              child: RegularText12(text:'Taught by top companies and universities')),
         ],
       ),
     );

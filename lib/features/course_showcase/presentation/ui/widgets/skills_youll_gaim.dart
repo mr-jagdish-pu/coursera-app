@@ -1,3 +1,5 @@
+import 'package:auth_fb_bloc/test_screens/new_test_file.dart';
+import 'package:auth_fb_bloc/utils/extention/spacer_extension.dart';
 import 'package:auth_fb_bloc/utils/responsiveness/extensions.dart';
 import 'package:flutter/material.dart';
 
@@ -15,10 +17,11 @@ class SkillYoullGainC extends StatelessWidget {
       margin: EdgeInsets.all(20),
       width: wd.w,
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-        Text(
+       TitleText(text:
           "Skills you will gain",
-          style: TextStyles.thickTitle,
+
         ),
+        10.spacerH,
         Wrap(
           spacing: 10,
           children: [

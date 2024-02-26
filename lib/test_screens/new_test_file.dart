@@ -74,7 +74,7 @@ class RegularText14 extends StatelessWidget {
       style: GoogleFonts.notoSansJp(
           fontWeight: FontWeight.w400,
           fontSize: 14,
-          letterSpacing: -0.5,
+          letterSpacing: -0.3,
           color: Colors.grey.shade800),
     );
   }
@@ -92,7 +92,7 @@ class SubTitleText extends StatelessWidget {
       style: GoogleFonts.notoSansJp(
           fontWeight: FontWeight.w900,
           fontSize: 14,
-          letterSpacing: -0.5,
+          letterSpacing: -0.2,
           color: Color(0xff111154),),
     );
   }
@@ -111,23 +111,46 @@ class RegularText11 extends StatelessWidget {
           fontSize: 11,
           letterSpacing: -0.5,
           color: Colors.grey.shade800),
-    );;
+    );
   }
-}class RegularText12 extends StatelessWidget {
+}
+
+class RegularText12B600 extends StatelessWidget {
   final String text;
-  const RegularText12({super.key, required this.text});
+  const RegularText12B600({super.key, required this.text});
 
   @override
   Widget build(BuildContext context) {
- return Text(
+    return Text(
       text,
       strutStyle: StrutStyle(height: 1, forceStrutHeight: true, fontSize: 14),
       style: GoogleFonts.notoSansJp(
           fontWeight: FontWeight.w600,
           fontSize: 12,
-          letterSpacing: -0.5,
+          letterSpacing: -0.3,
           color: Colors.grey.shade600),
-    );;
+    );
+  }
+
+
+}
+
+class RegularText12 extends StatelessWidget {
+  final String text;
+
+  const RegularText12({super.key, required this.text});
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      text,
+      strutStyle: StrutStyle(height: 1, forceStrutHeight: true, fontSize: 14),
+      style: GoogleFonts.notoSansJp(
+          fontWeight: FontWeight.w400,
+          fontSize: 12,
+          letterSpacing: -0.2,
+          color: Colors.grey.shade600),
+    );
   }
 }
 

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:getwidget/getwidget.dart';
 
+import '../../../../../test_screens/new_test_file.dart';
 import '../../../../../utils/custom_styles/text_styles.dart';
 
 class FAQSectionC extends StatelessWidget {
@@ -13,10 +14,9 @@ class FAQSectionC extends StatelessWidget {
       children: [
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20.0),
-          child: Text('Frequency Asked Questions',
-              style: TextStyles.bigThickTitle
-                  .copyWith(fontSize: 19, fontWeight: FontWeight.w900)),
-        ),
+          child: TitleText(text:'Frequency Asked Questions',
+
+        ),),
         SizedBox(
           height: 0,
         ),
@@ -51,7 +51,7 @@ class FAQTileC extends StatelessWidget {
       child: GFAccordion(
         margin: EdgeInsets.symmetric(vertical: 8),
         titlePadding: EdgeInsets.symmetric(horizontal: 0),
-        contentPadding: const EdgeInsets.symmetric(horizontal: 0),
+        contentPadding: const EdgeInsets.symmetric(horizontal: 0, vertical: 10),
         expandedTitleBackgroundColor: Colors.grey.shade100,
         title: 'When will I have access to the lectures and assignments?',
         content:

@@ -14,10 +14,9 @@ class TimeRemainingC extends StatelessWidget {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
+                RegularText12B600(text:
                   "4 hr 15 min to go",
-                  style: TextStyles.thickTitle
-                      .copyWith(fontWeight: FontWeight.w800, fontSize: 14),
+
                 ),
                 Container(
                   margin: EdgeInsets.symmetric(vertical: 5),
@@ -46,10 +45,9 @@ class TimeRemainingC extends StatelessWidget {
               children: [
                 Icon(Icons.cloud_download_outlined),
                 Text("Download"),
-                Text(
+                RegularText12(text:
                   "45 MB",
-                  style: TextStyles.courseSubtitle
-                      .copyWith(color: Colors.grey.shade600),
+
                 )
               ],
             )

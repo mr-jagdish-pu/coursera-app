@@ -1,3 +1,4 @@
+import 'package:auth_fb_bloc/test_screens/new_test_file.dart';
 import 'package:auth_fb_bloc/utils/responsiveness/extensions.dart';
 import 'package:flutter/material.dart';
 
@@ -18,11 +19,9 @@ class SubSection extends StatelessWidget {
         children: [
           Container(
             width: (wd * 0.7).w,
-            child: Text(
-              '$topic',
-              style: TextStyles.thickTitle,
-              overflow: TextOverflow.ellipsis,
-              maxLines: 2,
+            child: TitleText(
+             text: '$topic',
+
             ),
           ),
           Text("See All", style: TextStyles.normalBut70),

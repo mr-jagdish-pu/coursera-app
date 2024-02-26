@@ -79,7 +79,7 @@ class SelectedCourseCardComp extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          RegularText12(text:
+          RegularText12B600(text:
             "Course 1 of 14",
           ),
           Row(
