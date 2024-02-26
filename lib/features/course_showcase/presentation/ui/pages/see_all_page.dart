@@ -1,3 +1,5 @@
+import 'package:auth_fb_bloc/test_screens/new_test_file.dart';
+import 'package:auth_fb_bloc/utils/extention/spacer_extension.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../utils/custom_styles/text_styles.dart';
@@ -26,10 +28,9 @@ class SeeAllPage extends StatelessWidget {
           ),
           title: Padding(
             padding: const EdgeInsets.only(top: 18.0),
-            child: Text(
+            child: TitleText(text:
               'Professional Certificate',
-              style: TextStyles.bigThickTitle
-                  .copyWith(color: Colors.black.withOpacity(0.7)),
+
             ),
           ),
           backgroundColor: Colors.deepPurple.withOpacity(0.44),

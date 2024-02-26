@@ -12,9 +12,11 @@ class CourseListTileC extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text('Meta Android Developer', style: TextStyles.thickTitle),
-              Text('Meta', style: TextStyles.courseSubtitle.copyWith(fontSize: 14, fontWeight: FontWeight.w400)),
-              Text('Specialization', style: TextStyles.courseSubtitle.copyWith(fontSize: 14, fontWeight: FontWeight.w400)),
+              SubTitleText(text:'Meta Android Developer' ),
+              3.spacerH,
+              RegularText12B600(text:'Meta', ),
+              4.spacerH,
+              RegularText12(text:'Specialization',),
               Row(
                 children: [
                   Icon(
