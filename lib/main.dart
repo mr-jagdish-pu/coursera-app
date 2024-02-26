@@ -1,7 +1,13 @@
 import 'package:auth_fb_bloc/features/auth/presentation/authenticator_bloc/firebase_authenticator_bloc.dart';
+import 'package:auth_fb_bloc/features/auth/presentation/pages/homepage.dart';
 import 'package:auth_fb_bloc/features/auth/presentation/pages/login_page.dart';
+import 'package:auth_fb_bloc/features/course_plan/presentation/ui/pages/course_plans_page.dart';
 import 'package:auth_fb_bloc/features/course_showcase/presentation/ui/pages/course_details.dart';
 import 'package:auth_fb_bloc/features/course_showcase/presentation/ui/pages/course_main_page.dart';
+import 'package:auth_fb_bloc/features/course_showcase/presentation/ui/pages/see_all_page.dart';
+import 'package:auth_fb_bloc/features/learning_progress/presentation/ui/pages/learn_page.dart';
+import 'package:auth_fb_bloc/features/user_profile/presentation/ui/pages/profile_page.dart';
+import 'package:auth_fb_bloc/test_screens/new_test_file.dart';
 import 'package:auth_fb_bloc/utils/responsiveness/extensions.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -47,7 +53,7 @@ class MyApp extends StatelessWidget {
                 return Text('Error');
               }
               if (snapshot.hasData && snapshot.data != null) {
-                return CourseMainPage();
+                return NewTestPage();
               }
               //if user is not logged in send to login page
 
