@@ -1,6 +1,11 @@
+import 'package:auth_fb_bloc/test_screens/new_test_file.dart';
 import 'package:auth_fb_bloc/utils/custom_styles/text_styles.dart';
+import 'package:auth_fb_bloc/utils/extention/spacer_extension.dart';
+import 'package:auth_fb_bloc/utils/responsiveness/extensions.dart';
 import 'package:flutter/material.dart';
 import 'package:material_symbols_icons/symbols.dart';
+
+import '../../../../../test_screens/new_test_file.dart';
 part '../components/c_profile_header.dart';
 part '../components/c_certificate_card.dart';
 
@@ -30,7 +35,9 @@ class ProfilePage extends StatelessWidget {
           toolbarHeight: 80,
           title: Padding(
             padding: const EdgeInsets.only(top: 12),
-            child: Text('Profile', style: TextStyles.bigThickTitle),
+            child: HeaderText(
+              text: 'Profile',
+            )
           ),
         ),
         body: SafeArea(
@@ -42,14 +49,7 @@ class ProfilePage extends StatelessWidget {
                 SizedBox(
                   height: 30,
                 ),
-                Text(
-                  'Achievements',
-                  style: TextStyles.thickTitle.copyWith(
-                      fontSize: 18,
-                      color: Colors.grey.withOpacity(0.9),
-                      fontWeight: FontWeight.bold,
-                      letterSpacing: -0.1),
-                ),
+               TitleText(text: 'Achievements', greyText: true),
                 CertificateCardComp(),
                 CertificateCardComp(),
                 CertificateCardComp(),

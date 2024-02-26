@@ -11,15 +11,10 @@ class ProfileHeaderComp extends StatelessWidget {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text("Jagdish Ghimire",
-                style: TextStyles.thickTitle.copyWith(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                    letterSpacing: -0.1)),
-            Text("jagdissghimire@gmail.com",
-                style: TextStyles.courseTitle.copyWith(
-                    fontWeight: FontWeight.w400,
-                    color: Colors.black.withOpacity(0.6))),
+            TitleText(text: 'Jagdish Ghimire'),
+          3.spacerH,
+
+           RegularText14(text: 'jagdissghimire@gmail.com')
           ],
         ),
         //circle avatar

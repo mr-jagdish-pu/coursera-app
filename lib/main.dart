@@ -53,7 +53,7 @@ class MyApp extends StatelessWidget {
                 return Text('Error');
               }
               if (snapshot.hasData && snapshot.data != null) {
-                return NewTestPage();
+                return LearnPage();
               }
               //if user is not logged in send to login page
 

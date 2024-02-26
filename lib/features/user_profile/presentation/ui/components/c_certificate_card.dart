@@ -23,16 +23,9 @@ class CertificateCardComp extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   SizedBox(
-                    child: Text(
-                      "Programming Fundamentals in Kotlin",
-                      maxLines: 2,
-                      overflow: TextOverflow.ellipsis,
-                      style: TextStyles.courseTitle.copyWith(
-                          fontWeight: FontWeight.w700, fontSize: 15.5),
-                    ),
-                    width: wd * 0.6,
-                  ),
-                  Text("Meta"),
+                    child: SubTitleText(text: "Programming Fundamentals in Kotlin"),),
+                  2.spacerH,
+                  RegularText11(text: 'Meta'),
                   Row(
                     children: [
                       Icon(
@@ -43,10 +36,10 @@ class CertificateCardComp extends StatelessWidget {
                       SizedBox(
                         width: 3,
                       ),
-                      Text("Completed on Nov 2, 2022"),
+                      RegularText12(text:"Completed on Nov 2, 2022"),
                     ],
                   ),
-                  Text("Grade: 89%")
+                  RegularText12(text: "Grade: 89%")
                 ],
               ),
               Align(

@@ -1,3 +1,4 @@
+import 'package:auth_fb_bloc/test_screens/new_test_file.dart';
 import 'package:auth_fb_bloc/utils/responsiveness/extensions.dart';
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
@@ -10,7 +11,7 @@ class LearnPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Learn", style: TextStyles.bigThickTitle.copyWith(color: Colors.black),),
+      appBar: AppBar(title: HeaderText(text: "Learn", ),
         toolbarHeight: 80,
         backgroundColor: Colors.deepPurple.withOpacity(0.44),
 
@@ -21,7 +22,9 @@ class LearnPage extends StatelessWidget {
       child: ListView(
 
         children: [
-          Text("Keep learning to make progress", style: TextStyles.thickTitle.copyWith(color: Colors.black87.withOpacity(0.4))),
+
+          TitleText(text: "Keep learning to make progress",),
+
         SizedBox(height: 30,),
 
           SelectedCourses(),SelectedCourses(),SelectedCourses(),
@@ -42,8 +45,8 @@ class SelectedCourses extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text("Meta Android Developer", style: TextStyles.thickTitle.copyWith(color: Colors.black87.withOpacity(0.6), fontSize: 15)),
-          Text("By Meta", style: TextStyles.courseSubtitle.copyWith(fontSize: 12)),
+          SubTitleText(text:"Meta Android Developer",),
+          RegularText11(text:"By Meta", ),
           SelectedCourseCardComp(),
           Center(
             child: DotsIndicator(
@@ -76,19 +79,17 @@ class SelectedCourseCardComp extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            "Course 1 of 13",
+          RegularText12(text:
+            "Course 1 of 14",
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               SizedBox(
-                child: Text(
+                child: TitleText(
+                  text:
                   "Introduction to Programming",
-                  style: TextStyles.thickTitle
-                      .copyWith(fontSize: 18, fontWeight: FontWeight.bold),
-                  maxLines: 2,
-                  overflow: TextOverflow.ellipsis,
+
                 ),
                 width: wd.w * 0.65,
               ),
@@ -104,11 +105,8 @@ class SelectedCourseCardComp extends StatelessWidget {
           SizedBox(
             height: 20,
           ),
-          Text('You may join this course whenever you are ready.',
-              style: TextStyles.courseSubtitle.copyWith(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 12,
-                  color: Colors.black87.withOpacity(0.67))),
+          RegularText11(text:'You may join this course whenever you are ready.',
+          ),
           SizedBox(
             height: 5,
           ),
