@@ -1,4 +1,6 @@
 import 'package:auth_fb_bloc/features/course_showcase/presentation/ui/widgets/star_ratings_comp.dart';
+import 'package:auth_fb_bloc/test_screens/new_test_file.dart';
+import 'package:auth_fb_bloc/utils/extention/spacer_extension.dart';
 import 'package:auth_fb_bloc/utils/responsiveness/extensions.dart';
 import 'package:flutter/material.dart';
 
@@ -34,21 +36,20 @@ class CourseCard extends StatelessWidget {
             height: 5,
           ),
 
-          Text(
-            'Python for Everybody',
-            maxLines: 2,
-            overflow: TextOverflow.ellipsis,
-            style: TextStyles.courseTitle,
+          RegularText14(
+             text: 'Python for Everybody',
+
           ),
-          Text(
+          3.spacerH,
+          RegularText12B600(text:
             'International University',
-            maxLines: 2,
-            overflow: TextOverflow.ellipsis,
-            style: TextStyles.courseSubtitle,
+
           ),
-          Text(
+          3.spacerH,
+          RegularText12(
+            text:
             'Programming',
-            style: TextStyles.courseSubtitle,
+
           ),
           //4.5 star rating
           StarRatingShower(),

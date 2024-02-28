@@ -69,12 +69,17 @@ class RegularText14 extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return Text(
+
       text,
       strutStyle: StrutStyle(height: 1, forceStrutHeight: true, fontSize: 14),
+      overflow: TextOverflow.ellipsis,
+      maxLines: 2,
       style: GoogleFonts.notoSansJp(
+
           fontWeight: FontWeight.w400,
+
           fontSize: 14,
-          letterSpacing: -0.3,
+          letterSpacing: 0.2,
           color: Colors.grey.shade800),
     );
   }

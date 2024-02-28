@@ -12,7 +12,7 @@ class SubSection extends StatelessWidget {
   Widget build(BuildContext context) {
     final wd = MediaQuery.of(context).size.width;
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 20),
+      padding: EdgeInsets.symmetric(horizontal: 010),
       width: wd.w,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,

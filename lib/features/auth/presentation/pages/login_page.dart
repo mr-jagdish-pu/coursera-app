@@ -1,6 +1,6 @@
 import 'package:auth_fb_bloc/features/auth/presentation/authenticator_bloc/firebase_authenticator_bloc.dart';
-import 'package:auth_fb_bloc/features/auth/presentation/pages/homepage.dart';
 import 'package:auth_fb_bloc/features/auth/presentation/pages/registration_page.dart';
+import 'package:auth_fb_bloc/features/course_showcase/presentation/ui/pages/homepage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -80,7 +80,7 @@ class LoginPage extends StatelessWidget {
                   (BuildContext context, FirebaseAuthenticatorState state) {
                 if (state is FirebaseAuthenticatorSuccess) {
                   Navigator.of(context)
-                      .push(MaterialPageRoute(builder: (_) => HomePage()));
+                      .push(MaterialPageRoute(builder: (_) => RealHomePage()));
                 }
               },
             ),

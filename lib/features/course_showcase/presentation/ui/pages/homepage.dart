@@ -45,6 +45,7 @@ class RealHomePage extends StatelessWidget {
                     TopicsComp(),
                   ]),
                 ),
+                SliverPadding(padding: EdgeInsets.all(20)),
                 SliverToBoxAdapter(
                   child: SubSection(topic: 'Most Popular Courses'),
                 ),
