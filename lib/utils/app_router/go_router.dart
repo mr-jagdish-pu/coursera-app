@@ -4,6 +4,8 @@ import 'package:go_router/go_router.dart';
 
 import '../../features/course_showcase/presentation/ui/pages/course_details.dart';
 import '../../features/course_showcase/presentation/ui/pages/course_main_page.dart';
+import '../../features/coursera_career/presentation/ui/pages/coursera_careerpage.dart';
+import '../../features/coursera_career/presentation/ui/pages/my_career.dart';
 import '../../features/learning_progress/presentation/ui/pages/learn_page.dart';
 import '../../features/search_page/presenatation/ui/pages/search_page.dart';
 import '../../features/user_profile/presentation/ui/pages/profile_page.dart';
@@ -14,30 +16,50 @@ final GoRouter router = GoRouter(routes: <GoRoute>[
     builder: (context, state) => RealHomePage(),
     routes: [
       GoRoute(
-        path: RoutesNames.courseMainPage,
-        builder: (context, state) => CourseMainPage(),
+        path: RoutesNames.courseDetails,
+        builder: (context, state) => CourseDetails(),
+        routes: [
+          GoRoute(
+            path: RoutesNames.courseMainPage,
+            builder: (context, state) => CourseMainPage(),
+          ),
+        ],
       ),
+      GoRoute(
+          path: RoutesNames.seeAll, builder: (context, state) => SeeAllPage()),
     ],
   ),
   GoRoute(
     path: RoutesNames.learn,
     builder: (context, state) => LearnPage(),
+    routes: [
+      GoRoute(
+        path: RoutesNames.courseMainPage,
+        builder: (context, state) => CourseMainPage(),
+      ),
+    ],
   ),
+  // myCareer
   GoRoute(
-    path: RoutesNames.search,
-    builder: (context, state) => SearchPage(),
-  ),
+      path: RoutesNames.courseraCareer,
+      builder: (context, state) => CourseraCareerPage(),
+      routes: [
+        GoRoute(
+            path: RoutesNames.myCareer,
+            builder: (context, state) => MyCareerPage()),
+      ]),
+  GoRoute(
+      path: RoutesNames.search,
+      builder: (context, state) => SearchPage(),
+      routes: [
+        GoRoute(
+          path: RoutesNames.courseDetails,
+          builder: (context, state) => CourseDetails(),
+        ),
+      ]),
   GoRoute(
     path: RoutesNames.profile,
     builder: (context, state) => ProfilePage(),
-  ),
-  GoRoute(
-    path: RoutesNames.courseDetails,
-    builder: (context, state) => CourseDetails(),
-  ),
-  GoRoute(
-    path: RoutesNames.seeAll,
-    builder: (context, state) => SeeAllPage(),
   ),
 ]);
 
@@ -49,4 +71,8 @@ class RoutesNames {
   static const String seeAll = '/seeAll';
   static const String courseDetails = '/courseDetails';
   static const String courseMainPage = '/courseMainPage';
+
+  //coursera career
+  static const String courseraCareer = '/courseraCareer';
+  static const String myCareer = '/myCareer';
 }
