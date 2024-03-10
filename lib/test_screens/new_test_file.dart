@@ -13,11 +13,14 @@ class NewTestPage extends StatelessWidget {
         children: [
           HeaderText(text: 'Profile'),
           TitleText(text: "Jagdish Ghimire"),
-          RegularText14(text: "jagdissghimire@gmail.com", ),
+          RegularText14(
+            text: "jagdissghimire@gmail.com",
+          ),
           SubTitleText(text: "Achievements"),
-
           SubTitleText(text: "Programming in Kotlin"),
-          RegularText11(text: "Coursera Project Network", ),
+          RegularText11(
+            text: "Coursera Project Network",
+          ),
         ],
       ),
     );
@@ -45,7 +48,7 @@ class HeaderText extends StatelessWidget {
 class TitleText extends StatelessWidget {
   final String text;
   final bool greyText;
-   const TitleText({super.key, required this.text, this.greyText = false});
+  const TitleText({super.key, required this.text, this.greyText = false});
 
   @override
   Widget build(BuildContext context) {
@@ -56,7 +59,7 @@ class TitleText extends StatelessWidget {
           fontWeight: FontWeight.w900,
           fontSize: 16,
           letterSpacing: -0.5,
-          color: (!greyText)?Colors.grey.shade800:Colors.grey.shade600),
+          color: (!greyText) ? Colors.grey.shade800 : Colors.grey.shade600),
     );
   }
 }
@@ -67,17 +70,13 @@ class RegularText14 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return Text(
-
       text,
       strutStyle: StrutStyle(height: 1, forceStrutHeight: true, fontSize: 14),
       overflow: TextOverflow.ellipsis,
       maxLines: 2,
       style: GoogleFonts.notoSansJp(
-
           fontWeight: FontWeight.w400,
-
           fontSize: 14,
           letterSpacing: 0.2,
           color: Colors.grey.shade800),
@@ -95,20 +94,22 @@ class SubTitleText extends StatelessWidget {
       text,
       strutStyle: StrutStyle(height: 1, forceStrutHeight: true, fontSize: 14),
       style: GoogleFonts.notoSansJp(
-          fontWeight: FontWeight.w900,
-          fontSize: 14,
-          letterSpacing: -0.2,
-          color: Color(0xff111154),),
+        fontWeight: FontWeight.w900,
+        fontSize: 14,
+        letterSpacing: -0.2,
+        color: Color(0xff111154),
+      ),
     );
   }
 }
+
 class RegularText11 extends StatelessWidget {
   final String text;
   const RegularText11({super.key, required this.text});
 
   @override
   Widget build(BuildContext context) {
- return Text(
+    return Text(
       text,
       strutStyle: StrutStyle(height: 1, forceStrutHeight: true, fontSize: 14),
       style: GoogleFonts.notoSansJp(
@@ -136,8 +137,6 @@ class RegularText12B600 extends StatelessWidget {
           color: Colors.grey.shade600),
     );
   }
-
-
 }
 
 class RegularText12 extends StatelessWidget {
@@ -158,4 +157,3 @@ class RegularText12 extends StatelessWidget {
     );
   }
 }
-

@@ -3,12 +3,13 @@ import 'package:auth_fb_bloc/utils/extention/spacer_extension.dart';
 import 'package:auth_fb_bloc/utils/responsiveness/extensions.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../../utils/custom_styles/text_styles.dart';
 import 'subsection_comp.dart';
 import 'syllabus_section.dart';
 
 class SkillYoullGainC extends StatelessWidget {
-  const SkillYoullGainC({super.key});
+  final String text;
+
+  SkillYoullGainC({super.key, this.text = "Skills you will gain"});
 
   @override
   Widget build(BuildContext context) {
@@ -17,9 +18,8 @@ class SkillYoullGainC extends StatelessWidget {
       margin: EdgeInsets.all(20),
       width: wd.w,
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-       TitleText(text:
-          "Skills you will gain",
-
+        TitleText(
+          text: text,
         ),
         10.spacerH,
         Wrap(
@@ -74,4 +74,3 @@ class SuggestedCoursesC extends StatelessWidget {
     );
   }
 }
-

@@ -51,8 +51,8 @@ class RealHomePage extends StatelessWidget {
                 ),
                 SliverToBoxAdapter(
                   child: Container(
-                    height: 300,
-                    margin: EdgeInsets.only(bottom: 20),
+                    height: 250,
+                    margin: EdgeInsets.only(bottom: 0),
                     child: ListView.builder(
                         itemBuilder: (context, index) {
                           return CourseCard();
@@ -66,8 +66,8 @@ class RealHomePage extends StatelessWidget {
                 ),
                 SliverToBoxAdapter(
                   child: Container(
-                    height: 300,
-                    margin: EdgeInsets.only(bottom: 20),
+                    height: 250,
+                    margin: EdgeInsets.only(bottom: 0),
                     child: ListView.builder(
                         itemBuilder: (context, index) {
                           return CourseCard();
@@ -82,17 +82,17 @@ class RealHomePage extends StatelessWidget {
                 ),
                 SliverToBoxAdapter(
                   child: Container(
-                    height: 300,
+
                     margin: EdgeInsets.only(bottom: 20),
-                    child: ListView.builder(
-                      itemBuilder: (context, index) {
-                        return CourseListTiles();
-                      },
-                      itemCount: 4,
+                    child: Column(
+                      children: [
+                        CourseListTiles(),
+                        CourseListTiles(),
+                      ],
                     ),
                   ),
                 ),
-                SliverFillRemaining()
+
 
               ],
             ),

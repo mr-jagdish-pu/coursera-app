@@ -28,9 +28,8 @@ class SeeAllPage extends StatelessWidget {
           ),
           title: Padding(
             padding: const EdgeInsets.only(top: 18.0),
-            child: TitleText(text:
-              'Professional Certificate',
-
+            child: TitleText(
+              text: 'Professional Certificate',
             ),
           ),
           backgroundColor: Colors.deepPurple.withOpacity(0.44),

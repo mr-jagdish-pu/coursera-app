@@ -1,14 +1,13 @@
 import 'package:auth_fb_bloc/features/auth/presentation/authenticator_bloc/firebase_authenticator_bloc.dart';
 import 'package:auth_fb_bloc/features/auth/presentation/pages/login_page.dart';
-import 'package:auth_fb_bloc/features/entry_point_page.dart';
-import 'package:auth_fb_bloc/features/search_page/presenatation/ui/pages/search_page.dart';
+import 'package:auth_fb_bloc/features/course_showcase/presentation/ui/pages/course_main_page.dart';
 import 'package:auth_fb_bloc/utils/responsiveness/extensions.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'features/course_showcase/presentation/ui/pages/homepage.dart';
+
 import 'firebase_options.dart';
 
 main() async {
@@ -19,7 +18,9 @@ main() async {
 
 class MyApp extends StatelessWidget {
   MyApp({super.key});
+
   final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -47,7 +48,7 @@ class MyApp extends StatelessWidget {
                 return Text('Error');
               }
               if (snapshot.hasData && snapshot.data != null) {
-                return SearchPage();
+                return CourseMainPage();
               }
               //if user is not logged in send to login page
 

@@ -6,7 +6,7 @@ class RecentlyViewed extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 10),
+      padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10),
       child: Column(
         children: [
           Row(

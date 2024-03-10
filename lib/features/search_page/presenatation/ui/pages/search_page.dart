@@ -3,9 +3,13 @@ import 'package:auth_fb_bloc/utils/extention/spacer_extension.dart';
 import 'package:auth_fb_bloc/utils/responsiveness/extensions.dart';
 import 'package:flutter/material.dart';
 import '../../../../../test_screens/new_test_file.dart';
+import '../../../../course_showcase/presentation/ui/pages/see_all_page.dart';
 
 part '../components/recently_viewed.dart';
+part '../components/search_result.dart';
 part '../components/recent_searches.dart';
+part '../components/popular_searches.dart';
+
 
 class SearchPage extends StatelessWidget {
   const SearchPage({super.key});
@@ -49,9 +53,14 @@ class SearchPage extends StatelessWidget {
           body: ListView(
             children: [
               RecentlyViewed(),
+              10.spacerH,
+              RecentSearches(),
+              10.spacerH,
+              PopularSearches(),
+              10.spacerH,
+              SearchResultC()
             ],
           )),
     );
   }
 }
-

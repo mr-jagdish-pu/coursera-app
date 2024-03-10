@@ -21,7 +21,7 @@ class CourseMainPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print("DemoTestPage");
+
     return Scaffold(
         body: DefaultTabController(
             initialIndex: 1,
