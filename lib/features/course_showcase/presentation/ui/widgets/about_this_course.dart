@@ -3,7 +3,7 @@ import 'package:auth_fb_bloc/utils/extention/spacer_extension.dart';
 import 'package:flutter/material.dart';
 import 'package:readmore/readmore.dart';
 
-import '../../../../../utils/custom_styles/text_styles.dart';
+
 
 class AboutThisCourseCard extends StatelessWidget {
   const AboutThisCourseCard({super.key});

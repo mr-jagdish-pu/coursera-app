@@ -13,19 +13,7 @@ class SeeAllPage extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           toolbarHeight: 100,
-          leading: InkWell(
-            onTap: () {
-              Navigator.pop(context);
-            },
-            child: Padding(
-              padding: const EdgeInsets.only(top: 18.0),
-              child: Icon(
-                Icons.arrow_back,
-                color: Colors.black,
-                size: 30,
-              ),
-            ),
-          ),
+          
           title: Padding(
             padding: const EdgeInsets.only(top: 18.0),
             child: TitleText(

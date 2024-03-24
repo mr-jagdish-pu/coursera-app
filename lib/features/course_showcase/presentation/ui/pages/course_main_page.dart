@@ -1,5 +1,6 @@
 import 'package:auth_fb_bloc/features/course_showcase/presentation/ui/pages/course_details.dart';
 import 'package:auth_fb_bloc/test_screens/new_test_file.dart';
+import 'package:go_router/go_router.dart';
 import 'package:material_symbols_icons/symbols.dart';
 
 import '../../../../../utils/custom_styles/text_styles.dart';
@@ -24,7 +25,7 @@ class CourseMainPage extends StatelessWidget {
 
     return Scaffold(
         body: DefaultTabController(
-            initialIndex: 1,
+            initialIndex: 0,
             length: 4,
             child: NestedScrollView(
               headerSliverBuilder:
@@ -36,7 +37,9 @@ class CourseMainPage extends StatelessWidget {
                       padding: const EdgeInsets.only(top: 16.0),
                       child: IconButton(
                         icon: Icon(Icons.arrow_back),
-                        onPressed: () {},
+                        onPressed: () {
+                          GoRouter.of(context).pop() ;
+                        },
                       ),
                     ),
                     pinned: true,

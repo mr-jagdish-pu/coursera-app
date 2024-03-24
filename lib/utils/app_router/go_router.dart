@@ -3,6 +3,8 @@ import 'package:auth_fb_bloc/features/course_showcase/presentation/ui/pages/home
 import 'package:auth_fb_bloc/features/course_showcase/presentation/ui/pages/see_all_page.dart';
 import 'package:auth_fb_bloc/features/entry_point_page.dart';
 import 'package:auth_fb_bloc/features/user_profile/presentation/ui/pages/profile_page.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:go_router/go_router.dart';
 import '../../features/course_showcase/presentation/ui/pages/course_details.dart';
 import '../../features/course_showcase/presentation/ui/pages/course_main_page.dart';
@@ -20,6 +22,12 @@ final GlobalKey<NavigatorState> _sectionANavigatorKey =
     GlobalKey<NavigatorState>(debugLabel: 'sectionANav');
 
 final GoRouter router = GoRouter(
+  redirect: (context, state) {
+    FirebaseAuth auth = FirebaseAuth.instance;
+    if (auth.currentUser == null) {
+      return RoutesNames.login;
+    }
+  },
   navigatorKey: _rootNavigatorKey,
   initialLocation: RoutesNames.home,
   routes: [
@@ -34,7 +42,7 @@ final GoRouter router = GoRouter(
               GoRoute(
                 path: RoutesNames.home,
                 builder: (context, state) => RealHomePage(),
-                routes: [
+                routes:  [
                   GoRoute(
                     path: RoutesNames.courseDetails,
                     builder: (context, state) => CourseDetails(),

@@ -17,8 +17,13 @@ class EntryPointPage extends StatefulWidget {
 }
 
 class _EntryPointPageState extends State<EntryPointPage> {
+  @override
+  void initState() {
+    
+    super.initState();
+  }
   
-   
+  
 
   int currentIndex = 0;
 

@@ -2,8 +2,10 @@ import 'package:auth_fb_bloc/features/course_showcase/presentation/ui/pages/home
 import 'package:auth_fb_bloc/features/course_showcase/presentation/ui/widgets/skills_youll_gaim.dart';
 import 'package:auth_fb_bloc/utils/extention/spacer_extension.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../../../test_screens/new_test_file.dart';
+import '../../../../../utils/app_router/go_router.dart';
 
 class CourseraCareerPage extends StatelessWidget {
   const CourseraCareerPage({super.key});
@@ -37,7 +39,9 @@ class CourseraCareerPage extends StatelessWidget {
             child: RegularText12(text: 'Select the job roles that interest you the most. We will use this information to recommend relevant courses and content. You can always change your preferences later.'),
           ),
       10.spacerH,
-          SkillYoullGainC(text: "Data Science & Analytics (3)",),
+          InkWell(child: SkillYoullGainC(text: "Data Science & Analytics (3)",), onTap: (){
+            GoRouter.of(context).go('${RoutesNames.courseraCareer}/${RoutesNames.myCareer}');
+          },),
           7.spacerH,
           SkillYoullGainC(text: "Software Engineering & IT (13)",),
           5.spacerH,

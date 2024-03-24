@@ -2,7 +2,9 @@ import 'package:auth_fb_bloc/test_screens/new_test_file.dart';
 import 'package:auth_fb_bloc/utils/responsiveness/extensions.dart';
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
+import '../../../../../utils/app_router/go_router.dart';
 import '../../../../../utils/custom_styles/text_styles.dart';
 
 class LearnPage extends StatelessWidget {
@@ -114,7 +116,9 @@ class SelectedCourseCardComp extends StatelessWidget {
             height: 45,
             width: wd.w,
             child: FilledButton(
-                onPressed: () {},
+                onPressed: () {
+                  GoRouter.of(context).go('${RoutesNames.learn}/${RoutesNames.courseMainPage}');
+                },
                 child: Text('Enroll',
                     style: TextStyles.courseTitle.copyWith(
                         fontWeight: FontWeight.bold,

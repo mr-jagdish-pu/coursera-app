@@ -1,5 +1,7 @@
+import 'package:auth_fb_bloc/utils/app_router/go_router.dart';
 import 'package:auth_fb_bloc/utils/extention/spacer_extension.dart';
 import 'package:auth_fb_bloc/utils/responsiveness/extensions.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../../../test_screens/new_test_file.dart';
 import '../widgets/about_this_course.dart';
@@ -18,9 +20,13 @@ class CourseDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: Container(height: 50, color: Colors.blue.shade200 , child: Center(child: InkWell(child: SubTitleText(text: 'See Enrollment Options',), onTap: (){GoRouter.of(context).push('${RoutesNames.home}/${RoutesNames.courseDetails}/${RoutesNames.courseMainPage}');},)),),
       appBar: AppBar(
-        title: HeaderText(
-          text: "Course Details",
+        title: Padding(
+          padding: const EdgeInsets.only(top:38.0),
+          child: HeaderText(
+            text: "Course Details",
+          ),
         ),
       ),
       body: ListView(

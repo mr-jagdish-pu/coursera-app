@@ -6,7 +6,7 @@ import 'package:auth_fb_bloc/utils/responsiveness/extensions.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../../../../utils/custom_styles/text_styles.dart';
+
 
 class CourseCard extends StatelessWidget {
   const CourseCard({super.key});
@@ -15,9 +15,9 @@ class CourseCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final wd = MediaQuery.of(context).size.width;
     return InkWell(
-      onTap: () {
-        
-       context.go(RoutesNames.courseDetails);
+      onTap:  (){
+                          GoRouter.of(context).go('${RoutesNames.home}/${RoutesNames.courseDetails}');
+
       },
       child: Container(
         padding: EdgeInsets.all(5),

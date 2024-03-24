@@ -24,7 +24,7 @@ main() async {
 class MyApp extends StatelessWidget {
   MyApp({super.key});
 
-  final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
+  
 
   // This widget is the root of your application.
   @override

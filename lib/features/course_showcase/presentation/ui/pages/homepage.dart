@@ -57,7 +57,7 @@ class RealHomePage extends StatelessWidget {
                     margin: EdgeInsets.only(bottom: 0),
                     child: ListView.builder(
                         itemBuilder: (context, index) {
-                          return InkWell(child: CourseCard(), onTap: (){GoRouter.of(context).go('${RoutesNames.home}/${RoutesNames.courseDetails}');},);
+                          return CourseCard();
                         },
                         itemCount: 4,
                         scrollDirection: Axis.horizontal),
