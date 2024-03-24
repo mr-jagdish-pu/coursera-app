@@ -10,14 +10,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
-
+import 'features/go_router_demo.dart';
 import 'features/course_showcase/presentation/ui/pages/homepage.dart';
 import 'firebase_options.dart';
 
 main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-  runApp(MyApp());
+   runApp(MyApp());
+  //runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {

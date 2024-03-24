@@ -1,5 +1,7 @@
+import 'package:auth_fb_bloc/utils/app_router/go_router.dart';
 import 'package:auth_fb_bloc/utils/responsiveness/extensions.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../../../utils/custom_styles/text_styles.dart';
 import '../widgets/course_card_comp.dart';
@@ -55,7 +57,7 @@ class RealHomePage extends StatelessWidget {
                     margin: EdgeInsets.only(bottom: 0),
                     child: ListView.builder(
                         itemBuilder: (context, index) {
-                          return CourseCard();
+                          return InkWell(child: CourseCard(), onTap: (){GoRouter.of(context).go('${RoutesNames.home}/${RoutesNames.courseDetails}');},);
                         },
                         itemCount: 4,
                         scrollDirection: Axis.horizontal),
