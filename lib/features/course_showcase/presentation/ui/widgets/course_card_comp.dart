@@ -6,8 +6,6 @@ import 'package:auth_fb_bloc/utils/responsiveness/extensions.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-
-
 class CourseCard extends StatelessWidget {
   const CourseCard({super.key});
 
@@ -15,9 +13,10 @@ class CourseCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final wd = MediaQuery.of(context).size.width;
     return InkWell(
-      onTap:  (){
-                          GoRouter.of(context).go('${RoutesNames.home}/${RoutesNames.courseDetails}');
-
+      onTap: () {
+        GoRouter.of(context).go(
+          '${RoutesNames.home}/${RoutesNames.courseDetails}',
+        );
       },
       child: Container(
         padding: EdgeInsets.all(5),
@@ -42,21 +41,17 @@ class CourseCard extends StatelessWidget {
             SizedBox(
               height: 5,
             ),
-      
+
             RegularText14(
-               text: 'Python for Everybody',
-      
+              text: 'Python for Everybody',
             ),
             3.spacerH,
-            RegularText12B600(text:
-              'International University',
-      
+            RegularText12B600(
+              text: 'International University',
             ),
             3.spacerH,
             RegularText12(
-              text:
-              'Programming',
-      
+              text: 'Programming',
             ),
             //4.5 star rating
             StarRatingShower(),
